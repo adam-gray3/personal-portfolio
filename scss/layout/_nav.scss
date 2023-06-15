@@ -1,0 +1,9 @@
+.header__container{
+    // background-color: $primary-color;
+    // color: $white;
+    position: fixed;
+    width: 15%;
+    height: 100vh;
+    @include flexbox(column, nowrap, null, center);
+    text-align: center;
+}
