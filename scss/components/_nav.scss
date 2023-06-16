@@ -1,0 +1,33 @@
+.header__container{
+    background-color: $secondary-color;
+    color: $white;
+
+    &--title{
+        font-size: 42px;
+        background-color: $black;
+        color: $white;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin: 1rem auto;
+        text-align: center;
+        //Vertical align to center
+        line-height: 120px;
+        letter-spacing: 3px;
+        box-shadow: 0 0 8px #fff, inset 0 0 8px #ea4c89;
+    }
+}
+
+//Nav item styles
+.nav__container__list{
+    a{
+        font-size: 18px;
+        color: $white;
+        transition: 0.3s ease;
+    }
+
+    a:hover{
+        color: lighten($primary-color, 10);
+        text-decoration: underline;
+    }
+}

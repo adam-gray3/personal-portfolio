@@ -1,0 +1,54 @@
+.hamburger{
+    width: 40px;
+    height: 40px;
+    background-color: $secondary-color;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    border-radius: 2px;
+
+    //Hide hamburger on large screens 
+    @include mq(large){
+        display: none;
+    }
+
+    &:hover{
+        background-color: lighten($secondary-color, 10);
+    }
+}
+
+//Bars 
+.ham-bar{
+    width: 70%;
+    height: 3px;
+    background-color: $white;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.bar-top{
+    top: 25%;
+}
+
+.bar-bottom{
+    top: 75%;
+}
+
+//Show X when button is clicked, add active class using JavaScript
+.hamburger.active .bar-top{
+    transform: translate(-50%,-50%) rotate(-315deg);
+    top: 50%;
+}
+
+.hamburger.active .bar-mid{
+    opacity: 0;
+}
+
+.hamburger.active .bar-bottom{
+    transform: translate(-50%,-50%) rotate(-225deg);
+    top: 50%;
+}
