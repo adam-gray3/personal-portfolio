@@ -25,6 +25,7 @@ a {
   flex-wrap: nowrap;
   align-items: center;
   text-align: center;
+  z-index: 1;
   display: none;
 }
 @media (min-width: 992px) {
@@ -35,11 +36,91 @@ a {
 
 .nav__container__list {
   height: 40vh;
-  margin-top: 3rem;
+  margin: 3rem;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-evenly;
+}
+
+.nav__container__socials {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.nav__container__socials--link {
+  margin: 0 0.5rem;
+}
+
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.hero__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+@media (min-width: 992px) {
+  .hero__video {
+    left: 15%;
+  }
+}
+.hero__content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .hero__content {
+    transform: translate(-50%, -45%);
+  }
+}
+.hero__content h1 {
+  font-size: 42px;
+  white-space: nowrap;
+  margin-bottom: 1rem;
+}
+.hero__content p {
+  margin-bottom: 1rem;
+  font-size: 18px;
+}
+.hero__content strong {
+  border-bottom: 2px solid #f86c37;
+}
+.hero__content a {
+  font-weight: 600;
+  color: #f86c37;
+}
+.hero__content a:hover {
+  text-decoration: underline;
+}
+
+.scroll {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+@media (min-width: 992px) {
+  .scroll {
+    transform: translate(-45%);
+  }
+}
+
+span {
+  display: block;
+  text-align: center;
 }
 
 .header__container {
@@ -57,7 +138,7 @@ a {
   text-align: center;
   line-height: 120px;
   letter-spacing: 3px;
-  box-shadow: 0 0 8px #fff, inset 0 0 8px #ea4c89;
+  box-shadow: 0 0 8px #fff, inset 0 0 8px #f86c37;
 }
 
 .nav__container__list a {
@@ -66,19 +147,29 @@ a {
   transition: 0.3s ease;
 }
 .nav__container__list a:hover {
-  color: #ee1a1a;
+  color: #fa9068;
   text-decoration: underline;
+}
+
+.nav__container__socials a {
+  color: #f86c37;
+  transition: 0.4s ease;
+}
+.nav__container__socials a:hover {
+  color: #f34909;
+  transform: rotate(360deg);
 }
 
 .hamburger {
   width: 40px;
   height: 40px;
-  background-color: #272728;
+  background-color: #f86c37;
   position: absolute;
   top: 10px;
   right: 20px;
   cursor: pointer;
   border-radius: 2px;
+  z-index: 1;
 }
 @media (min-width: 992px) {
   .hamburger {
@@ -86,7 +177,7 @@ a {
   }
 }
 .hamburger:hover {
-  background-color: #404042;
+  background-color: #fa9068;
 }
 
 .ham-bar {

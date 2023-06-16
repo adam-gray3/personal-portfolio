@@ -36,5 +36,13 @@
     @else {
        @error "#{$size} is not a valid screensize"
     }
+};
+
+
+@mixin position($position: absolute, $top: 0, $left: 0, $bottom: null, $right: null){
+    position: $position;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
 }
- 
