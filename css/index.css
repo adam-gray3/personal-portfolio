@@ -16,20 +16,42 @@ a {
   text-decoration: none;
 }
 
-.header__container {
+.body-wrapper {
+  position: relative;
+  padding: 2rem;
+  margin: 0 auto;
+}
+@media (min-width: 992px) {
+  .body-wrapper {
+    width: 80%;
+    margin-left: 15%;
+  }
+}
+
+.social-icons {
+  color: #f86c37;
+  transition: 0.4s ease;
+}
+.social-icons:hover {
+  color: #f34909;
+  transform: rotate(360deg);
+}
+
+.sidenav__container {
   position: fixed;
   width: 15%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
   text-align: center;
+  padding-top: 1rem;
   z-index: 1;
   display: none;
 }
 @media (min-width: 992px) {
-  .header__container {
+  .sidenav__container {
     display: block;
   }
 }
@@ -49,28 +71,44 @@ a {
   flex-wrap: nowrap;
   justify-content: center;
 }
-.nav__container__socials--link {
+.nav__container__socials a {
   margin: 0 0.5rem;
 }
 
+.mobile-menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.mobile-menu ul {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%);
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-menu.active {
+  opacity: 1;
+  z-index: 2;
+}
+
 .hero {
+  width: 100%;
   height: 100vh;
   position: relative;
-  overflow: hidden;
 }
 .hero__video {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: -1;
-}
-@media (min-width: 992px) {
-  .hero__video {
-    left: 15%;
-  }
 }
 .hero__content {
   position: absolute;
@@ -109,13 +147,8 @@ a {
   position: absolute;
   top: 90%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%);
   color: #fff;
-}
-@media (min-width: 992px) {
-  .scroll {
-    transform: translate(-45%);
-  }
 }
 
 span {
@@ -123,41 +156,118 @@ span {
   text-align: center;
 }
 
-.header__container {
-  background-color: #272728;
-  color: #fff;
+.contact {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
-.header__container--title {
+@media (min-width: 768px) {
+  .contact {
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 30px;
+  }
+}
+.contact h3 {
+  font-size: 1.4rem;
+}
+
+@media (min-width: 768px) {
+  .contact__info {
+    width: 30%;
+    margin: 0;
+  }
+}
+.contact__info__socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.contact__form__container {
+  width: 100%;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .contact__form__container {
+    width: 60%;
+  }
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .contact__form .name {
+    width: 48%;
+  }
+}
+.contact__form button {
+  width: 35%;
+  align-self: flex-start;
+}
+.contact__form__title {
+  width: 100%;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.grid__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 2rem 0;
+}
+@media (min-width: 992px) {
+  .grid__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.grid__container__item {
+  border: 2px solid black;
+}
+
+.sidenav__container {
+  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.sidenav__container--title {
   font-size: 42px;
-  background-color: #000;
   color: #fff;
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  margin: 1rem auto;
+  margin: 0 auto;
   text-align: center;
   line-height: 120px;
   letter-spacing: 3px;
-  box-shadow: 0 0 8px #fff, inset 0 0 8px #f86c37;
 }
 
 .nav__container__list a {
   font-size: 18px;
-  color: #fff;
+  color: #f86c37;
+  font-weight: 600;
   transition: 0.3s ease;
 }
 .nav__container__list a:hover {
-  color: #fa9068;
+  color: #f34909;
   text-decoration: underline;
 }
 
-.nav__container__socials a {
-  color: #f86c37;
-  transition: 0.4s ease;
+.mobile-menu {
+  background-color: rgba(188, 172, 165, 0.9);
+  transition: 0.5s ease;
 }
-.nav__container__socials a:hover {
-  color: #f34909;
-  transform: rotate(360deg);
+.mobile-menu a {
+  font-weight: 600;
+  color: #000;
 }
 
 .hamburger {
@@ -169,15 +279,12 @@ span {
   right: 20px;
   cursor: pointer;
   border-radius: 2px;
-  z-index: 1;
+  z-index: 2;
 }
 @media (min-width: 992px) {
   .hamburger {
     display: none;
   }
-}
-.hamburger:hover {
-  background-color: #fa9068;
 }
 
 .ham-bar {
@@ -211,6 +318,67 @@ span {
 .hamburger.active .bar-bottom {
   transform: translate(-50%, -50%) rotate(-225deg);
   top: 50%;
+}
+
+.contact__info {
+  border: 1px solid #f86c37;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 4px;
+}
+@media (min-width: 992px) {
+  .contact__info {
+    margin: 0;
+  }
+}
+.contact__info__title {
+  margin: 1rem 0;
+}
+.contact__info label {
+  display: block;
+}
+.contact__info p {
+  margin-bottom: 1rem;
+}
+.contact__info a {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #f86c37;
+  font-weight: 600;
+}
+.contact__info a:hover {
+  text-decoration: underline;
+}
+.contact__info__socials a {
+  color: black;
+}
+
+.contact__form {
+  background-color: #f86c37;
+  padding: 1rem;
+  border-radius: 4px;
+}
+.contact__form input, .contact__form textarea, .contact__form button {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+}
+.contact__form button {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.contact__form button:hover {
+  background-color: #000;
+  color: #fff;
+}
+.contact__form__title {
+  width: 100%;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 /*# sourceMappingURL=index.css.map */

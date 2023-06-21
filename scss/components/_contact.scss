@@ -1,0 +1,73 @@
+//Info section
+.contact__info{
+    border: 1px solid $primary-color;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 4px;
+
+    @include mq(large){
+        margin: 0;
+    }
+
+    &__title{
+        margin: 1rem 0;
+    }
+
+    label{
+        display: block;
+    }
+
+    p{
+        margin-bottom: 1rem;
+    }
+
+    a{
+        display: inline-block;
+        margin-bottom: 1rem;
+        color: $primary-color;
+        font-weight: 600;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    &__socials{
+        a{
+            color: black
+        }
+    }
+}
+
+//Form Section
+.contact__form{
+    background-color: $primary-color;
+    padding: 1rem;
+    border-radius: 4px;
+
+    input, textarea, button{
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        outline: none;
+        border: none;
+        border-radius: 4px;
+    }
+
+    button{
+        cursor: pointer;
+        transition: 0.3s ease;
+
+        &:hover{
+            background-color: $black;
+            color: $white;
+        }
+    }
+
+    &__title{
+        width: 100%;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+}

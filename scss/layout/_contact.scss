@@ -1,0 +1,62 @@
+.contact{
+    @include flexbox(column);
+    @include mq(medium){
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: 30px;
+    }
+    //Titles for each section
+    h3{
+        font-size: 1.4rem;
+    }
+}
+
+//Info section
+.contact__info{
+    //Change size of contact info 
+    @include mq(medium){
+        width: 30%;
+        margin: 0;
+    }
+
+    &__socials{
+        @include flexbox(row, null, space-around, center);
+        margin-top: 2rem;
+        //Change color of social links
+    }
+}
+
+
+//Form section
+.contact__form__container{
+    width: 100%;
+    flex: 1;
+
+    @include mq(medium){
+        width: 60%;
+    }
+}
+
+.contact__form{
+    @include flexbox(row, wrap, space-between);
+    width: 100%;
+
+    //Change form size 
+    @include mq(medium){
+        //Put name inputs side by side 
+        .name{
+            width: 48%;
+        }
+    }
+
+    button{
+        width: 35%;
+        align-self: flex-start;
+    }
+
+    &__title{
+        width: 100%;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+}

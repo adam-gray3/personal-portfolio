@@ -7,15 +7,11 @@
     right: 20px;
     cursor: pointer;
     border-radius: 2px;
-    z-index: 1;
+    z-index: 2;
 
     //Hide hamburger on large screens 
     @include mq(large){
         display: none;
-    }
-
-    &:hover{
-        background-color: lighten($primary-color, 10);
     }
 }
 

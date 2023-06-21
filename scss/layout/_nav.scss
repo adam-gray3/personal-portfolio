@@ -1,9 +1,10 @@
-.header__container{
+.sidenav__container{
     position: fixed;
     width: 15%;
-    height: 100vh;
+    height: 100%;
     @include flexbox(column, nowrap, null, center);
     text-align: center;
+    padding-top: 1rem;
     z-index: 1;
     //Hide side bar on mobile 
     display: none;
@@ -13,6 +14,7 @@
     }
 }
 
+//Large Screen Nav List
 .nav__container__list{
     height: 40vh;
     margin: 3rem;
@@ -22,7 +24,29 @@
 .nav__container__socials{
     @include flexbox(row, nowrap, center);
 
-    &--link{
+    a{
         margin: 0 0.5rem;
     }
+}
+
+//MOBILE NAV OVERLAY
+.mobile-menu{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    
+
+    //MOBILE NAV LIST 
+    ul{
+        @include position(absolute, 25%, 50%);
+        transform: translate(-50%);
+        height: 25%;
+        @include flexbox(column, nowrap, space-between, center);
+    }
+}
+
+.mobile-menu.active{
+    opacity: 1;
+    z-index: 2;
 }

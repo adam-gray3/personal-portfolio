@@ -1,0 +1,15 @@
+.grid__container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 2rem 0;
+
+    @include mq(large){
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+.grid__container__item{
+    border: 2px solid black;
+}

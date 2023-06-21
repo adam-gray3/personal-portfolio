@@ -11,39 +11,111 @@
     <title>Adam Gray Portfolio</title>
 </head>
 <body>
-    <header class="header__container">
-       <a href="index.html"><h1 class="header__container--title">AG</h1></a> 
-        <nav class="nav__container">
-            <ul class="nav__container__list">
-                <li><a href="about.html">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="coding.html">Code Snippets</a></li>
-                <li><a href="scion.html">SCS Scheme</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="nav__container__socials">
-            <a href="https://www.linkedin.com/in/asg-dev" target="_blank" class="nav__container__socials--link" aria-label="linkedin"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>                  
-            <a href="https://twitter.com/asg_dev_" target="_blank" class="nav__container__socials--link" aria-label="twitter"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-            <a href="https://github.com/adam-gray3" target="_blank" class="nav__container__socials--link" aria-label="github"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
-        </div>
-    </header>
-    <div class="hamburger">
-        <div class="ham-bar bar-top"></div>
-        <div class="ham-bar bar-mid"></div>
-        <div class="ham-bar bar-bottom"></div>
-    </div>
 
-    <main class="hero">
-        <video muted autoplay loop playsinline class="hero__video">
-            <source src="hero.mp4" type="video/mp4">
-        </video>
-        <div class="hero__content">
-            <h1>Adam Gray</h1>
-            <p>Cambridgeshire based <strong>Web Developer</strong></p>
-            <p>Check out my <a href="#portfolio">portfolio</a> to see some of my projects</p>
+<header class="sidenav__container">
+    <a href="index.html"><h1 class="sidenav__container--title">AG</h1></a> 
+    <nav class="nav__container">
+        <ul class="nav__container__list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="coding.html">Code Snippets</a></li>
+            <li><a href="scion.html">SCS Scheme</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="nav__container__socials">
+        <a href="https://www.linkedin.com/in/asg-dev" target="_blank" class="social-icons" aria-label="linkedin"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>                  
+        <a href="https://twitter.com/asg_dev_" target="_blank" class="social-icons" aria-label="twitter"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+        <a href="https://github.com/adam-gray3" target="_blank" class="social-icons" aria-label="github"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+    </div>
+</header>
+
+
+<!-- Mobile nav -->
+<div class="hamburger">
+    <div class="ham-bar bar-top"></div>
+    <div class="ham-bar bar-mid"></div>
+    <div class="ham-bar bar-bottom"></div>
+</div>
+<nav class="mobile-menu">
+    <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="coding.html">Code Snippets</a></li>
+        <li><a href="scion.html">SCS Scheme</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <video muted autoplay loop playsinline class="hero__video">
+        <source src="hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero__content">
+        <h1>Adam Gray</h1>
+        <p>Cambridgeshire based <strong>Web Developer</strong></p>
+        <p>Check out my <a href="#portfolio">portfolio</a> to see some of my projects</p>
+    </div>
+    <p class="scroll">SCROLL DOWN<span><i class="fa fa-caret-down fa-2x" aria-hidden="true"></i></span></p>
+</section>
+
+<main class="body-wrapper"> 
+    <section class="portfolio">
+        <h2>My Projects</h2>
+        <div class="grid__container">
+            <div class="grid__container__item">
+                <img src="images/netmatters.jpg" alt="" style="width: 100%">
+                <div class="info">
+                    <p>PROJECT ONE</p>
+                    <div class="info--icons">
+                        <img src="images/html.png" alt="HTML 5 Logo">
+                        <img src="images/css-3.png" alt="CSS 3 Logo">
+                        <img src="images/sass.png" alt="SASS Logo" style="width: 50px">
+                    </div>
+                    <a href="#">VIEW PROJECT</a>
+                </div>
+            </div>
+            <div class="grid__container__item">
+                <img src="images/netmatters.jpg" alt="" style="width: 100%">
+                <div class="info">
+                    <p>PROJECT ONE</p>
+                    <div class="info--icons">
+                        <img src="images/html.png" alt="HTML 5 Logo">
+                        <img src="images/css-3.png" alt="CSS 3 Logo">
+                        <img src="images/sass.png" alt="SASS Logo" style="width: 50px">
+                    </div>
+                    <a href="#">VIEW PROJECT</a>
+                </div>
+            </div>
         </div>
-        <p class="scroll">SCROLL DOWN<span><i class="fa fa-caret-down fa-2x" aria-hidden="true"></i></span></p>
-    </main>
+    </section>
+    <section class="contact">
+        <div class="contact__info">
+            <h3 class="contact__info__title">Get In Touch</h3>
+            <p>If you would like to work together you can contact me by phone, email or submit a form.</p>
+            <label for="email">Email me at...</label>
+            <a href="mailto:asg-dev@outlook.com?subject=Enquiry" target=_blank id="email">asg-dev@outlook.com</a>
+            <label for="">Give me a call on....</label>
+            <a href="tel:07743240967">07743240967</a>
+            <div class="contact__info__socials">
+                <a href="https://www.linkedin.com/in/asg-dev" target="_blank" class="social-icons" aria-label="linkedin"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>                  
+                <a href="https://twitter.com/asg_dev_" target="_blank" class="social-icons" aria-label="twitter"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+                <a href="https://github.com/adam-gray3" target="_blank" class="social-icons" aria-label="github"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="contact__form__container">
+            <form action="#" method="POST" class="contact__form">
+                <h3 class="contact__form__title">Send me a message!</h3>
+                <input type="text" placeholder="First Name" class="name">
+                <input type="text" placeholder="Last Name" class="name">
+                <input type="email" placeholder="Email">
+                <input type="text" placeholder="Subject">
+                <textarea name="" id="" placeholder="Enter a message"></textarea>
+                <button type="submit">SUBMIT</button>
+            </form>
+        </div>
+    </section>
+</main>
+
 </body>
 </html>
