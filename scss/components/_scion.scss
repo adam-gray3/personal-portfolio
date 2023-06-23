@@ -1,0 +1,36 @@
+.scs-scheme{
+    background: url("../images/header-img.jpg") no-repeat center center/cover;
+    h2{
+        color: $white;
+        text-align: center;
+        padding: 2rem 0;
+    }
+}
+
+.container__card{
+    background-color: $primary-color;
+    margin: 1rem 0;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    line-height: 1.6;
+    font-weight: 600;
+
+    //Card Titles 
+    &__title{
+        color: $white;
+        text-decoration: underline;
+        margin-bottom: 1rem;
+    }
+
+    //Link to netmatters page & treehouse
+    a, span{
+        color: $white;
+        font-weight: 600;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

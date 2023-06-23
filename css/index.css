@@ -26,7 +26,7 @@ hr {
 
 .body-wrapper, .footer {
   position: relative;
-  background-color: #f86c37;
+  background-color: rgba(248, 108, 55, 0.9);
 }
 @media (min-width: 992px) {
   .body-wrapper, .footer {
@@ -39,11 +39,11 @@ hr {
 }
 
 .social-icons {
-  color: #f86c37;
+  color: rgba(248, 108, 55, 0.9);
   transition: 0.4s ease;
 }
 .social-icons:hover {
-  color: #f34909;
+  color: rgba(243, 73, 9, 0.9);
   transform: rotate(360deg);
 }
 
@@ -133,7 +133,7 @@ hr {
     transform: translate(-50%, -45%);
   }
 }
-.hero__content h1 {
+.hero__content h2 {
   font-size: 42px;
   white-space: nowrap;
   margin-bottom: 1rem;
@@ -143,11 +143,11 @@ hr {
   font-size: 18px;
 }
 .hero__content strong {
-  border-bottom: 2px solid #f86c37;
+  border-bottom: 2px solid rgba(248, 108, 55, 0.9);
 }
 .hero__content a {
   font-weight: 600;
-  color: #f86c37;
+  color: rgba(248, 108, 55, 0.9);
 }
 .hero__content a:hover {
   text-decoration: underline;
@@ -253,8 +253,21 @@ span {
   width: 30px;
 }
 
-main {
-  overflow: hidden;
+html, body {
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .scs-scheme {
+    height: 100%;
+  }
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .sidenav__container {
@@ -275,12 +288,12 @@ main {
 
 .nav__container__list a {
   font-size: 18px;
-  color: #f86c37;
+  color: rgba(248, 108, 55, 0.9);
   font-weight: 600;
   transition: 0.3s ease;
 }
 .nav__container__list a:hover {
-  color: #f34909;
+  color: rgba(243, 73, 9, 0.9);
   text-decoration: underline;
 }
 
@@ -296,7 +309,7 @@ main {
 .hamburger {
   width: 40px;
   height: 40px;
-  background-color: #f86c37;
+  background-color: rgba(248, 108, 55, 0.9);
   position: absolute;
   top: 10px;
   right: 20px;
@@ -345,7 +358,7 @@ main {
 
 .contact__info {
   background-color: #fff;
-  border: 1px solid #f86c37;
+  border: 1px solid rgba(248, 108, 55, 0.9);
   margin-bottom: 1rem;
   padding: 0.5rem;
   text-align: center;
@@ -368,7 +381,7 @@ main {
 .contact__info a {
   display: inline-block;
   margin-bottom: 1rem;
-  color: #f86c37;
+  color: rgba(248, 108, 55, 0.9);
   font-weight: 600;
 }
 .contact__info a:hover {
@@ -399,7 +412,7 @@ main {
   border-radius: 4px;
 }
 .contact__form button:hover {
-  background-color: #f86c37;
+  background-color: rgba(248, 108, 55, 0.9);
   color: #fff;
 }
 .contact__form__title {
@@ -433,6 +446,9 @@ main {
   font-size: 20px;
   font-weight: 600;
 }
+.info .view {
+  text-align: left;
+}
 .info .view:hover {
   text-decoration: underline;
 }
@@ -453,6 +469,38 @@ main {
   .footer a {
     margin-right: 15%;
   }
+}
+
+.scs-scheme {
+  background: url("../images/header-img.jpg") no-repeat center center/cover;
+}
+.scs-scheme h2 {
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.container__card {
+  background-color: rgba(248, 108, 55, 0.9);
+  margin: 1rem 0;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  line-height: 1.6;
+  font-weight: 600;
+}
+.container__card__title {
+  color: #fff;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+}
+.container__card a, .container__card span {
+  color: #fff;
+  font-weight: 600;
+}
+.container__card a:hover, .container__card span:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=index.css.map */
