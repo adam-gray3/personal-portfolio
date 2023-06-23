@@ -1,4 +1,5 @@
 .contact{
+    padding-bottom: 1rem;
     @include flexbox(column);
     @include mq(medium){
         flex-direction: row;
@@ -41,9 +42,8 @@
     @include flexbox(row, wrap, space-between);
     width: 100%;
 
-    //Change form size 
-    @include mq(medium){
-        //Put name inputs side by side 
+    //Put name inputs side by side
+    @include mq(medium){ 
         .name{
             width: 48%;
         }
@@ -51,7 +51,6 @@
 
     button{
         width: 35%;
-        align-self: flex-start;
     }
 
     &__title{

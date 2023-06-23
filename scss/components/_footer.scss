@@ -1,0 +1,13 @@
+.footer{
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    text-align: center;
+
+    a{
+        color: $black;
+        display: inline-block;
+        @include mq(large){
+            margin-right: 15%;
+        }
+    }
+}

@@ -13,7 +13,7 @@
 <body>
 
 <header class="sidenav__container">
-    <a href="index.html"><h1 class="sidenav__container--title">AG</h1></a> 
+    <a href="#"><h1 class="sidenav__container--title">AG</h1></a> 
     <nav class="nav__container">
         <ul class="nav__container__list">
             <li><a href="about.html">About</a></li>
@@ -47,7 +47,7 @@
     </ul>
 </nav>
 
-<section class="hero">
+<section class="hero" id="hero">
     <video muted autoplay loop playsinline class="hero__video">
         <source src="hero.mp4" type="video/mp4">
     </video>
@@ -64,31 +64,74 @@
         <h2>My Projects</h2>
         <div class="grid__container">
             <div class="grid__container__item">
-                <img src="images/netmatters.jpg" alt="" style="width: 100%">
-                <div class="info">
-                    <p>PROJECT ONE</p>
-                    <div class="info--icons">
-                        <img src="images/html.png" alt="HTML 5 Logo">
-                        <img src="images/css-3.png" alt="CSS 3 Logo">
-                        <img src="images/sass.png" alt="SASS Logo" style="width: 50px">
+                <a href="" target="_BLANK">
+                    <div class="grid-img-container">
+                        <img src="images/netmatters.jpg" alt="" class="grid-img">
                     </div>
-                    <a href="#">VIEW PROJECT</a>
-                </div>
+                    <div class="info">
+                        <p>NETMATTERS HOMEPAGE</p>
+                        <div class="info--icons">
+                            <img src="images/html.png" alt="HTML 5 Logo">
+                            <img src="images/css-3.png" alt="CSS 3 Logo">
+                            <img src="images/sass.png" alt="SASS Logo">
+                        </div>
+                        <a href="#" class="view">VIEW PROJECT</a>
+                    </div>
+                </a>
+            </div>
+
+            <div class="grid__container__item">
+                <a href="" target="_BLANK">
+                    <div class="grid-img-container">
+                        <img src="images/placeholder-2.jpg" alt="" class="grid-img">
+                    </div>
+                    <div class="info">
+                        <p>PROJECT ONE</p>
+                        <div class="info--icons">
+                            <!-- <img src="images/html.png" alt="HTML 5 Logo">
+                            <img src="images/css-3.png" alt="CSS 3 Logo">
+                            <img src="images/sass.png" alt="SASS Logo" style="width: 50px"> -->
+                        </div>
+                        <a href="#" class="view">VIEW PROJECT</a>
+                    </div>
+                </a>
+            </div>
+
+            <div class="grid__container__item">
+                <a href="" target="_BLANK">
+                    <div class="grid-img-container">
+                        <img src="images/placeholder-2.jpg" alt="" class="grid-img">
+                    </div>
+                    <div class="info">
+                        <p>PROJECT THREE</p>
+                        <div class="info--icons">
+                            <!-- <img src="images/html.png" alt="HTML 5 Logo">
+                            <img src="images/css-3.png" alt="CSS 3 Logo">
+                            <img src="images/sass.png" alt="SASS Logo" style="width: 50px"> -->
+                        </div>
+                        <a href="#" class="view">VIEW PROJECT</a>
+                    </div>
+                </a>
             </div>
             <div class="grid__container__item">
-                <img src="images/netmatters.jpg" alt="" style="width: 100%">
-                <div class="info">
-                    <p>PROJECT ONE</p>
-                    <div class="info--icons">
-                        <img src="images/html.png" alt="HTML 5 Logo">
-                        <img src="images/css-3.png" alt="CSS 3 Logo">
-                        <img src="images/sass.png" alt="SASS Logo" style="width: 50px">
+                <a href="" target="_BLANK">
+                    <div class="grid-img-container">
+                        <img src="images/placeholder-2.jpg" alt="" class="grid-img">
                     </div>
-                    <a href="#">VIEW PROJECT</a>
-                </div>
+                    <div class="info">
+                        <p>PROJECT FOUR</p>
+                        <div class="info--icons">
+                            <!-- <img src="images/html.png" alt="HTML 5 Logo">
+                            <img src="images/css-3.png" alt="CSS 3 Logo">
+                            <img src="images/sass.png" alt="SASS Logo" style="width: 50px"> -->
+                        </div>
+                        <a href="#" class="view">VIEW PROJECT</a>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
+    <hr>
     <section class="contact">
         <div class="contact__info">
             <h3 class="contact__info__title">Get In Touch</h3>
@@ -116,6 +159,9 @@
         </div>
     </section>
 </main>
+<footer class="footer">
+    <a href="#"><span><i class="fa fa-caret-up fa-2x" aria-hidden="true"></i></span>BACK TO TOP</a>
+</footer>
 
 </body>
 </html>

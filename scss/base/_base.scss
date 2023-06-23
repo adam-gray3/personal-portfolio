@@ -1,5 +1,6 @@
 *{
     font-family: $base-font;
+    scroll-behavior: smooth;
 }
 
 li{
@@ -10,15 +11,25 @@ a{
     text-decoration: none;
 }
 
+hr{
+    height: 2px;
+    background-color: $black;
+    border: none;
+    margin: 2rem;
+}
 
 //Page Layout
-.body-wrapper{
+.body-wrapper, .footer{
     position: relative;
-    padding: 2rem;
-    margin: 0 auto;
+    background-color: $primary-color;
+    // background-color: black;
     @include mq(large){
-        width: 80%;
         margin-left: 15%;
+    }
+
+    section{
+        width: 85%;
+        margin: 0 auto;
     }
 }
 

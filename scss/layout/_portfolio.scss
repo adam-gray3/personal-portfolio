@@ -1,15 +1,25 @@
 .grid__container{
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
-    margin: 2rem 0;
+    gap: 30px;
 
-    @include mq(large){
+
+    @include mq(medium){
         grid-template-columns: 1fr 1fr;
     }
 }
 
+//Grid item images 
+.grid-img-container{
+    width: 100%;
+    height: 225px;
+}
 
-.grid__container__item{
-    border: 2px solid black;
+.grid-img{
+    width: 100%;
+    height: 100%;
+}
+
+.info--icons img{
+    width: 30px;
 }
