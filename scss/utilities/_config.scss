@@ -1,0 +1,47 @@
+hr{
+    height: 2px;
+    background-color: $black;
+    border: none;
+    margin: 2rem;
+}
+
+//Ensure page fills height
+html,body{
+    height: 100%;
+}
+
+
+.scs-scheme, .about, .snippet{
+    min-height: 100%;
+}
+
+//Page Layout
+.body-wrapper, .footer{
+    position: relative;
+    background-color: $primary-color;
+    // background-color: black;
+    @include mq(large){
+        padding-left: 15%;
+    }
+
+    section{
+        width: 85%;
+        margin: 0 auto;
+    }
+}
+
+//Social icon styles
+.social-icons{
+    color: $primary-color;
+    transition: 0.4s ease;
+
+    &:hover{
+        color: darken($primary-color, 10);
+        transform: rotate(360deg);
+    }
+}
+
+//Background for extra pages 
+.scs-scheme, .snippet, .about{
+    background: url("../images/header-img.jpg") no-repeat center center/cover;
+}

@@ -1,0 +1,21 @@
+//ABOUT PAGE CONTAINER
+.about .container{
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include mq(large){
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+        margin-top: 2rem;
+
+        .history, .goals{
+            grid-column: 1/3;
+        }
+    }
+}
+
+.about .container__card{
+    @include mq(large){
+        margin: 0;
+    }
+}

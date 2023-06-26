@@ -5,7 +5,7 @@
 
 //Each grid item 
 .grid__container__item{
-   border-radius: 3px;
+    border-radius: 3px;
     transition: 0.5s ease;
     background-color: $white;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -15,8 +15,9 @@
     }
 
     &:hover{
-        transform: translateY(-10px);
-        background-color: darken($white, 10);
+        // transform: translateY(-10px);
+        transform: scale(1.025);
+        background-color: darken($white, 12);
     }
 }
 

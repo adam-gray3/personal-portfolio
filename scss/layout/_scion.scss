@@ -1,13 +1,3 @@
-html,body{
-    height: 100%;
-}
-
-.scs-scheme{
-   @include mq(medium){
-    height: 100%;
-   }
-}
-
 //Container Layout
 .container{
     width: 85%;
