@@ -80,7 +80,7 @@ a {
 
 .nav__container__list {
   height: 40vh;
-  margin: 3rem;
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -513,6 +513,9 @@ span {
   transform: scale(1.025);
   background-color: #e0e0e0;
 }
+.grid__container__item:hover .project-info {
+  opacity: 1;
+}
 
 .info {
   padding: 1rem;
@@ -529,6 +532,28 @@ span {
 }
 .info--icons {
   margin: 0.75rem 0;
+}
+
+.grid-img-container {
+  position: relative;
+}
+.grid-img-container .project-info {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+  text-align: center;
+  padding: 2rem;
+}
+.grid-img-container .project-info p {
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 1rem;
 }
 
 .footer {

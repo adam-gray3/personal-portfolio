@@ -17,7 +17,7 @@
 //Large Screen Nav List
 .nav__container__list{
     height: 40vh;
-    margin: 3rem;
+    margin: 1rem;
     @include flexbox(column, nowrap, space-evenly);
 }
 

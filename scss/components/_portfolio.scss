@@ -17,6 +17,10 @@
     &:hover{
         transform: scale(1.025);
         background-color: darken($white, 12);
+
+        .project-info{
+            opacity: 1;
+        }
     }
 }
 
@@ -39,5 +43,31 @@
 
     &--icons{
         margin: 0.75rem 0;
+    }
+}
+
+//Project info styles 
+.grid-img-container{
+    position: relative;
+ 
+
+    .project-info{
+        transition: 0.5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255,255,255, 0.8);
+        color: $black;
+        text-align: center;
+        padding: 2rem;
+
+        p{
+            font-weight: 400;
+            font-size: 16px;
+            margin-top: 1rem;
+        }
     }
 }
