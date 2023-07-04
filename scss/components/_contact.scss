@@ -46,6 +46,7 @@
     background-color: rgba(0,0,0,0.8);
     padding: 1rem;
     border-radius: 4px;
+   
 
     input, textarea{
         width: 100%;
@@ -54,10 +55,6 @@
         outline: none;
         border: none;
         border-radius: 4px;
-        
-        &:focus{
-            border: 2px solid $primary-color;
-        }
     }
 
     &__btn{
@@ -77,7 +74,45 @@
 
     &__title{
         color: $white;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         text-align: center;
     }
+
+    //Input error border
+    .error{
+        border: 2px solid red;
+    }
+    //Input error message 
+    small{
+        color: red;
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    //Input success icon
+    i{
+        color: #fff;
+        position: absolute;
+        top: 35%;
+        right: 10px;
+        transform: translate(0, -50%);
+        background-color: #1ad74a;
+        padding: 0.3rem;
+        border-radius: 50%;
+        display: none;
+    }
+
+    i.success{
+        display: block;
+    }
+    //Input success border
+    .success{
+        border: 2px solid #1ad74a;
+    }
+
+    textarea{
+        resize: none;
+    }
 }
+

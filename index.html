@@ -50,6 +50,11 @@
         <li><a href="scion.html">SCS Scheme</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
+    <div class="hamburger active close">
+        <div class="ham-bar bar-top"></div>
+        <div class="ham-bar bar-mid"></div>
+        <div class="ham-bar bar-bottom"></div>
+    </div>
 </nav>
 
 <section class="hero" id="hero">
@@ -159,13 +164,33 @@
             </div>
         </div>
         <div class="contact__form__container">
-            <form action="#" method="POST" class="contact__form">
+            <form action="#" method="POST" class="contact__form" novalidate>
                 <h3 class="contact__form__title">Send me a message!</h3>
-                <input type="text" placeholder="First Name" class="name">
-                <input type="text" placeholder="Last Name" class="name">
-                <input type="email" placeholder="Email">
-                <input type="text" placeholder="Subject">
-                <textarea placeholder="Enter a message"></textarea>
+                <div class="form__control name">
+                    <input type="text" placeholder="First Name" class="first__name name">
+                    <small></small>
+                    <i class="fa fa-check"></i>
+                </div>
+                <div class="form__control name">
+                    <input type="text" placeholder="Last Name" class="last__name name">
+                    <small></small>
+                    <i class="fa fa-check"></i>
+                </div>
+                <div class="form__control">
+                    <input type="email" placeholder="Email" class="email">
+                    <small></small>
+                    <i class="fa fa-check"></i>
+                </div>
+                <div class="form__control">
+                    <input type="text" placeholder="Subject" class="subject">
+                    <small></small>
+                    <i class="fa fa-check"></i>
+                </div>
+                <div class="form__control">
+                    <textarea placeholder="Enter a message" class="message"></textarea>
+                    <small></small>
+                    <i class="fa fa-check"></i>
+                </div>
                 <button type="submit" class="contact__form__btn">SUBMIT</button>
             </form>
         </div>
@@ -174,5 +199,6 @@
 <footer class="footer">
     <a href="#"><span><i class="fa fa-caret-up fa-2x" aria-hidden="true"></i></span>BACK TO TOP</a>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>

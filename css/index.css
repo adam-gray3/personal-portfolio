@@ -237,10 +237,15 @@ span {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  row-gap: 10px;
   width: 100%;
 }
+.contact__form .form__control {
+  width: 100%;
+  position: relative;
+}
 @media (min-width: 768px) {
-  .contact__form .name {
+  .contact__form .form__control.name {
     width: 48%;
   }
 }
@@ -474,9 +479,6 @@ span {
   border: none;
   border-radius: 4px;
 }
-.contact__form input:focus, .contact__form textarea:focus {
-  border: 2px solid #f86c37;
-}
 .contact__form__btn {
   cursor: pointer;
   transition: ease-out 0.4s;
@@ -492,8 +494,38 @@ span {
 }
 .contact__form__title {
   color: #fff;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   text-align: center;
+}
+.contact__form .error {
+  border: 2px solid red;
+}
+.contact__form small {
+  color: red;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.contact__form i {
+  color: #fff;
+  position: absolute;
+  top: 35%;
+  right: 10px;
+  transform: translate(0, -50%);
+  background-color: #1ad74a;
+  padding: 0.3rem;
+  border-radius: 50%;
+  display: none;
+}
+.contact__form i.success {
+  display: block;
+}
+.contact__form .success {
+  border: 2px solid #1ad74a;
+}
+.contact__form textarea {
+  resize: none;
 }
 
 .portfolio h2 {

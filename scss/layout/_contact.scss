@@ -40,11 +40,17 @@
 
 .contact__form{
     @include flexbox(row, wrap, space-between);
+    row-gap: 10px;
     width: 100%;
+
+    .form__control{
+        width: 100%;
+        position: relative;
+    }
 
     //Put name inputs side by side
     @include mq(medium){ 
-        .name{
+        .form__control.name{
             width: 48%;
         }
     }
