@@ -191,6 +191,23 @@ span {
   text-align: center;
 }
 
+.blink::after {
+  content: "";
+  width: 2px;
+  border-right: 3px solid #fff;
+  animation: blink 0.5s infinite ease;
+  -webkit-animation: blink 0.5s infinite ease;
+  margin-left: 5px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .contact {
   padding-bottom: 1rem;
   display: flex;
@@ -237,7 +254,7 @@ span {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  row-gap: 10px;
+  row-gap: 25px;
   width: 100%;
 }
 .contact__form .form__control {
@@ -474,7 +491,6 @@ span {
 .contact__form input, .contact__form textarea {
   width: 100%;
   padding: 1rem;
-  margin-bottom: 1rem;
   outline: none;
   border: none;
   border-radius: 4px;
@@ -501,6 +517,8 @@ span {
   border: 2px solid red;
 }
 .contact__form small {
+  width: 100%;
+  text-align: center;
   color: red;
   position: absolute;
   top: -20px;
@@ -510,7 +528,7 @@ span {
 .contact__form i {
   color: #fff;
   position: absolute;
-  top: 35%;
+  top: 50%;
   right: 10px;
   transform: translate(0, -50%);
   background-color: #1ad74a;

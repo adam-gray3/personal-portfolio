@@ -51,7 +51,7 @@
     input, textarea{
         width: 100%;
         padding: 1rem;
-        margin-bottom: 1rem;
+        // margin-bottom: 1rem;
         outline: none;
         border: none;
         border-radius: 4px;
@@ -84,6 +84,8 @@
     }
     //Input error message 
     small{
+        width: 100%;
+        text-align: center;
         color: red;
         position: absolute;
         top: -20px;
@@ -94,7 +96,7 @@
     i{
         color: #fff;
         position: absolute;
-        top: 35%;
+        top: 50%;
         right: 10px;
         transform: translate(0, -50%);
         background-color: #1ad74a;

@@ -40,7 +40,7 @@
 
 .contact__form{
     @include flexbox(row, wrap, space-between);
-    row-gap: 10px;
+    row-gap: 25px;
     width: 100%;
 
     .form__control{

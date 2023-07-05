@@ -71,3 +71,24 @@ span{
     display: block;
     text-align: center;
 }
+
+.blink{
+    &::after{
+        content: "";
+        width: 2px;
+        border-right: 3px solid #fff;
+        animation: blink 0.5s infinite ease;
+        -webkit-animation: blink 0.5s infinite ease;
+        margin-left: 5px;
+    }
+  }
+  
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
