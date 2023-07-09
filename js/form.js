@@ -6,39 +6,39 @@ const lastName = document.querySelector(".last__name");
 const email = document.querySelector(".email");
 const subject = document.querySelector(".subject");
 const message = document.querySelector(".message");
+const final = document.querySelector(".final");
 const errorMsg = document.querySelector("small");
 const validEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 let errors = [];
 
-//Show error funtion
 const showError = (input, message) => {
     input.classList.add("error");
     input.nextElementSibling.textContent = message;
 }
 
-const success = (input, message) => {
+const showSuccess = (input, message) => {
     input.classList.add("success");
     input.nextElementSibling.textContent = message;
     input.nextElementSibling.nextElementSibling.style.display = "block";
 }
 
+//Validate each input field except email
+const validateInput = (input, message) => {
+    if(input.value === ""){
+        showError(input, message);
+        errors++;
+    } else{
+        showSuccess(input, "");
+    }
+};
 
 const validateForm = () => {
+    validateInput(firstName, "Enter you'r first name");
+    validateInput(lastName, "Enter you'r last name");
+    validateInput(subject, "Enter a subject");
+    validateInput(message, "Please enter a short message");
 
-    if(firstName.value === ""){
-        showError(firstName, "Enter you'r first name");
-        errors++;
-    } else{
-        success(firstName, "");
-    }
-
-    if(lastName.value === ""){
-        showError(lastName, "Enter you'r last name");
-        errors++;
-    } else{
-        success(lastName, "");
-    }
-
+    //Validate email with regex
     if(email.value === ""){
         showError(email, "Enter you'r email address");
         errors++;
@@ -46,21 +46,13 @@ const validateForm = () => {
         showError(email, "Enter a valid email address");
         errors++;
     } else{
-        success(email, "");
+        showSuccess(email, "");
     }
 
-    if(subject.value === "" || subject.value.length < 4){
-        showError(subject, "Enter a subject");
-        errors++;
-    } else{
-        success(subject, "");
-    }
-
-    if(message.value === ""){
-        showError(message, "Enter a small message");
-        errors++;
-    } else{
-        success(message, "")
+    //Honeypot field 
+    if(final.value){
+        alert("Not human");
+        return false;
     }
 };
 

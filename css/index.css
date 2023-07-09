@@ -313,13 +313,23 @@ span {
   grid-template-columns: 1fr;
 }
 
+.title {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
 .code-snippet {
   display: grid;
   grid-template-columns: 1fr;
   place-items: center;
+  background-color: #f86c37;
+  position: relative;
+  padding-bottom: 1rem;
+  line-height: 1.5;
 }
 .code-snippet span {
-  margin: 1rem;
+  margin: 0.5rem;
 }
 .code-snippet p {
   margin: 0 1rem;
@@ -338,7 +348,66 @@ span {
 @media (min-width: 1200px) {
   .code-snippet {
     grid-template-columns: 1fr 1fr;
+    margin: 0 2rem;
   }
+}
+
+.slide-nav {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 1rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+@media (min-width: 1200px) {
+  .slide-nav {
+    font-size: 2rem;
+  }
+}
+
+.next-btn {
+  right: 0;
+}
+@media (min-width: 1200px) {
+  .next-btn {
+    right: -3%;
+  }
+}
+
+.prev-btn {
+  left: 0;
+}
+@media (min-width: 1200px) {
+  .prev-btn {
+    left: -3%;
+  }
+}
+
+.bullets {
+  position: absolute;
+  top: 98%;
+}
+
+.bullets ul {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.bullets li {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.bullets li.active {
+  background-color: #000;
 }
 
 .about .container {
@@ -544,6 +613,10 @@ span {
 }
 .contact__form textarea {
   resize: none;
+}
+
+.final {
+  display: none;
 }
 
 .portfolio h2 {

@@ -1,10 +1,20 @@
+.title{
+    color: $white;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
 .code-snippet{
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
+    background-color: #f86c37;
+    position: relative;  
+    padding-bottom: 1rem;
+    line-height: 1.5;
     
     span{
-        margin: 1rem;
+        margin: 0.5rem;
     }
 
     p{
@@ -27,5 +37,61 @@
 
     @include mq(xlarge){
        grid-template-columns: 1fr 1fr;
+       margin: 0 2rem;
     }
+}
+
+//Slider controls 
+.slide-nav{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 1rem;
+    background: none;
+    border: none;
+    color: $white;
+    cursor: pointer;
+
+    @include mq(xlarge){
+        font-size: 2rem;
+    }
+}
+    
+.next-btn{
+    right: 0;
+    @include mq(xlarge){
+        right: -3%;
+    }
+}
+
+.prev-btn{
+    left: 0;
+
+    @include mq(xlarge){
+        left: -3%;
+    }
+}
+
+.bullets{
+    position: absolute;
+    top: 98%;
+}
+
+.bullets ul{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+
+.bullets li{
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $white;
+    cursor: pointer;
+}
+
+.bullets li.active{
+    background-color: $black;
 }

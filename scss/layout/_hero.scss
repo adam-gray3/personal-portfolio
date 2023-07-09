@@ -57,7 +57,7 @@
 }
 
 
-//SCROLL DOWN STYLES
+//SCROLL DOWN ICON STYLES
 .scroll{
     @include position(absolute, 90%, 50%);
     transform: translate(-50%);
@@ -72,6 +72,7 @@ span{
     text-align: center;
 }
 
+//BLINKING CURSOR EFFECT
 .blink{
     &::after{
         content: "";

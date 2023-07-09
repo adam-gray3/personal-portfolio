@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f794ebdf85.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
@@ -61,8 +62,8 @@
         <h2>My Code Snippets</h2>
         <div class="container">
             <div class="container__card">
-
-               <div class="code-snippet">
+                <h4 class="title">SASS Snippet</h4>
+                <div class="code-snippet">
                     <p class="container__card__text">
                         This is a code snippet from my Netmatters homepage build,
                         using SASS I created a map for different colours for the 
@@ -73,14 +74,18 @@
                         <span><a href="https://github.com/adam-gray3/netmatters-homepage" target="_BLANK">GitHub Repo!</a></span>
                     </p>
                     <div class="img-cont">
-                        <img src="images/sass-snippet.jpg" alt="Code example">
+                        <img class="slide-img" src="images/sass-snippet.jpg" alt="Code example">
+                    </div>
+                    <button class="slide-nav prev-btn" aria-label="slide left"><i class="fas fa-chevron-left"></i></button>
+                    <button class="slide-nav next-btn" aria-label="slide right"><i class="fas fa-chevron-right"></i></button>
+                    <div class="bullets">
+                        <ul></ul>
                     </div>
                 </div>
             </div>
-           
         </div>
     </section>
-    <script src="script.js"></script>
-    <script src="menu.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/slideshow.js"></script>
 </body>
 </html>
