@@ -19,7 +19,7 @@ const slideItems = [
         <span><a href="https://github.com/adam-gray3/personal-portfolio" target="_BLANK">GitHub Repo!</a></span>`, 
         image: "images/js-menu.jpg", 
     }
-]
+];
 
 let currentSlide = 0;
 const nxtBtn = document.querySelector(".next-btn");
@@ -36,7 +36,7 @@ const showSlide = () => {
     image.src = slideItems[currentSlide].image;
     title.textContent = slideItems[currentSlide].title;
     bulletUpdate()
-}
+};
 
 //Create each bullet dynamically 
 slideItems.forEach(slide => {
@@ -67,7 +67,7 @@ const prevSlide = () => {
 };
 
 //Auto run slider
-let autoSlide = setInterval(nxtSlide, duration)
+let autoSlide = setInterval(nxtSlide, duration);
 
 //EVENT LISTENERS FOR BUTTONS
 nxtBtn.addEventListener("click", nxtSlide);
@@ -88,8 +88,8 @@ const bulletUpdate = () => {
 bulletList.addEventListener("click", (e) => {
     //Convert id to number from string to match index
     currentSlide = +e.target.id;
-    showSlide()
-    bulletUpdate()
+    showSlide();
+    bulletUpdate();
     clearInterval(autoSlide);
     autoSlide = setInterval(nxtSlide, duration);  
 });
