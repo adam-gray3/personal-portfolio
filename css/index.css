@@ -292,7 +292,7 @@ span {
 }
 @media (min-width: 992px) {
   .grid-img-container {
-    height: 220px;
+    height: 300px;
   }
 }
 

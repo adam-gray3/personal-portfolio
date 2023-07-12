@@ -7,7 +7,7 @@ const slideItems = [
         social icons I wanted to display. I then looped over the map 
         with a loop and created new classes, then I just 
         had to add the correct class to the icon within my HTML. </p>
-        <span><a href="#">Live project here!</a></span>
+        <span><a href="https://netmatters.adam-gray.netmatters-scs.co.uk/" target="_BLANK">Live project here!</a></span>
         <span><a href="https://github.com/adam-gray3/netmatters-homepage" target="_BLANK">GitHub Repo!</a></span>`, 
         image: "images/sass-snippet.jpg",
     }, {
